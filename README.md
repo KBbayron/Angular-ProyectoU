@@ -2,8 +2,8 @@
 
 Este repositorio es un repositorio es un proyecto univeristario aplicando tecnologias de JavaScript como Angular 
 
-## Comandos en terminal para este proyecto
-# CLI de Angular
+# Comandos en terminal para este proyecto
+## CLI de Angular
 ### Windows - Abirir PowerShell con permisos de administrador
 1. npm install -g @angular/cli
 
