@@ -2,7 +2,7 @@
     <div class="card-header">Agregar emplado</div>
     <div class="card-body">
         <!-- eventos de angular (ngSubmit)="" -->
-        <form (ngSubmit)="enviarDatos()">
+        <form [formGroup]="formularioDeEmpleados" (ngSubmit)="enviarDatos()">
             <div class="mb-3">
                 <label for="cuadroNombre" class="form-label">Nombre:</label>
                 <input
@@ -10,6 +10,7 @@
                     class="form-control"
                     name=""
                     id="cuadroNombre"
+                    formControlName="nombre"
                     aria-describedby="helpId"
                     placeholder="Escribe tu nombre"
                 />
@@ -21,6 +22,7 @@
                     class="form-control"
                     name=""
                     id="cuadroCorreo"
+                    formControlName="correo"
                     aria-describedby="helpId"
                     placeholder="Escribe tu correo"
                 />
