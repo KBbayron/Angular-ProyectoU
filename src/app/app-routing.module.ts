@@ -5,10 +5,11 @@ import { EditarEmpleadoComponent } from './componentes/editar-empleado/editar-em
 import { ListarEmpleadoComponent } from './componentes/listar-empleado/listar-empleado.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'agregar-empleado', pathMatch: 'full' },
   { path: 'agregar-empleado', component: AgregarEmpleadoComponent },
   { path: 'editar-empleado/:id', component: EditarEmpleadoComponent },
   { path: 'listar-empleado', component: ListarEmpleadoComponent },
-  { path: '', redirectTo: 'agregar-empleado', pathMatch: 'full' },
+
 ];
 
 @NgModule({

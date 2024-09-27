@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { AgregarEmpleadoComponent } from './componentes/agregar-empleado/agregar-empleado.component';
 import { EditarEmpleadoComponent } from './componentes/editar-empleado/editar-empleado.component';
 import { ListarEmpleadoComponent } from './componentes/listar-empleado/listar-empleado.component';
-
+import { FormsModule, ReactiveFormsModule,  } from '@angular/forms';
+//import { provideHttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,12 +17,17 @@ import { ListarEmpleadoComponent } from './componentes/listar-empleado/listar-em
     ListarEmpleadoComponent
   ],
   imports: [
+    //provideHttpClient,
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

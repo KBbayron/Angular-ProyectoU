@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './agregar-empleado.component.css'
 })
 export class AgregarEmpleadoComponent {
-
+  // cualquier tipo de dato
+  enviarDatos (): any{
+    console.log('se preciono el boton')
+  }
 }
