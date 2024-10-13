@@ -20,5 +20,8 @@ Este repositorio es un repositorio es un proyecto univeristario aplicando tecnol
 ## Crear componentes necesarios
 4. ng g c nombre/componentes
 
+## Crear servicio 
+5. ng g s servicio/crud 
+
 ## Iniciar el servidor
-5. ng serve
+6. ng serve

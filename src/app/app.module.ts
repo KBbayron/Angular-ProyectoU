@@ -7,8 +7,8 @@ import { AgregarEmpleadoComponent } from './componentes/agregar-empleado/agregar
 import { EditarEmpleadoComponent } from './componentes/editar-empleado/editar-empleado.component';
 import { ListarEmpleadoComponent } from './componentes/listar-empleado/listar-empleado.component';
 import { FormsModule, ReactiveFormsModule,  } from '@angular/forms';
-//import { provideHttpClient } from '@angular/common/http';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
+//import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,14 +18,15 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     //provideHttpClient,
-    HttpClientModule,
+    //HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
