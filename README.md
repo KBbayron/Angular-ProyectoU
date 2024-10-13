@@ -4,24 +4,25 @@ Este repositorio es un repositorio es un proyecto univeristario aplicando tecnol
 
 # Comandos en terminal para este proyecto
 ## CLI de Angular
+
 ### Windows - Abirir PowerShell con permisos de administrador
 1. npm install -g @angular/cli
 
 ### Linux/Ubunut 
 1. sudo npm install -g @angular/cli
 
-
 ## Crear carpeta de proyecto
 2. ng new nombre --no-standalone
+3. cd nombre
 
 ## Instalar framework de Bootstrap
-3. npm install bootstrap
+4. npm install bootstrap
 
 ## Crear componentes necesarios
-4. ng g c nombre/componentes
+5. ng g c nombre/components
 
-## Crear servicio 
-5. ng g s servicio/crud 
+## Crear servicios necesarios
+6. ng g s nombre/services
 
 ## Iniciar el servidor
-6. ng serve
+7. ng serve
