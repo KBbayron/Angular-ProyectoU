@@ -7,13 +7,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CrudService {
-  private readonly API = 'http://localhost/empleados'; // Definimos la API como una constante de solo lectura
+  API:string = 'http://localhost:8080/empleados/'; 
 
   constructor(private clienteHttp: HttpClient) { }
-
   agregarEmpleado(datosEmpleado: Empleado): Observable<any> {
-    const url = `${this.API}?insertar=1`; // Usamos Template Literals para mejorar la legibilidad
-    return this.clienteHttp.post(url, datosEmpleado); // Mantenemos el uso del post con la URL y los datos
+    return this.clienteHttp.post(this.API+"?insertar=1",datosEmpleado); 
+  }
+
+  obtenerEmpleados(){
+    return this.clienteHttp.get(this.API); 
   }
 }
 

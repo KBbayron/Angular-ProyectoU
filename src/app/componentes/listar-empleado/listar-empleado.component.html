@@ -13,10 +13,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>9</td>
-                        <td>Bayron</td>
-                        <td>bayronlr_outlook.com</td>
+                    <tr *ngFor="let empleado of Empleados; let iControl=index" >
+                        <td></td>
                         <td><a href="" routerLink="/editar-empleado/1">Editar</a> | Borrar</td>
                     </tr>
                 </tbody>
