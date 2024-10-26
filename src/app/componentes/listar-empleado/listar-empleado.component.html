@@ -1,6 +1,6 @@
 <!-- bs5card -  // headfood -->
 <div class="card">
-    <div class="card-header">Empleados</div>
+    <div class="card-header" *ngIf="Empleados">Empleados</div>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-primary">
@@ -14,8 +14,13 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let empleado of Empleados; let iControl=index" >
-                        <td></td>
-                        <td><a href="" routerLink="/editar-empleado/1">Editar</a> | Borrar</td>
+                        <td>{{empleado.id}}</td>
+                        <td>{{empleado.nombre}}</td>
+                        <td>{{empleado.correo}}</td>
+                        <td>
+                            <a href="" class="btn btn-info" routerLink="/editar-empleado/{{empleado.id}}">Editar</a> | 
+                            <a href="" class="btn btn-danger" (click)="borrarRegistro(empleado.id, iControl)">Borrar</a> 
+                        </td>
                     </tr>
                 </tbody>
             </table>
