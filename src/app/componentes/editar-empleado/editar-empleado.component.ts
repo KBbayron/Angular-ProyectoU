@@ -6,19 +6,44 @@ import { CrudService } from '../../servicio/crud.service';
 @Component({
   selector: 'app-editar-empleado',
   templateUrl: './editar-empleado.component.html',
-  styleUrl: './editar-empleado.component.css'
+  styleUrls: ['./editar-empleado.component.css']
 })
 export class EditarEmpleadoComponent implements OnInit {
+  formularioDeEmpleados: FormGroup;
   elID:any;
   constructor(
+    /*privado - manejo interno */
     private activeRoute:ActivatedRoute, 
-    private crudService:CrudService){
-      this.elID = this.activeRoute.snapshot.paramMap.get('elID');
-      this.crudService.ObtenerEmpleado(this.elID).subscribe(respuesta => {
-        console.log(respuesta);
+    private crudService:CrudService,
+    // publico - interactua con el usuario final
+    public formulario:FormBuilder,
+    private ruteador:Router
+  ){
+    this.elID = this.activeRoute.snapshot.paramMap.get('id');
+    this.crudService.ObtenerEmpleado(this.elID).subscribe(respuesta => {
+      console.log(respuesta);
+      // agregar datos a los inputs 
+      this.formularioDeEmpleados.setValue({
+        nombre: respuesta[0]['nombre'],
+        correo: respuesta[0]['correo']
       });
+    });
+
+    this.formularioDeEmpleados = this.formulario.group({
+      nombre: [''],
+      correo: ['']
+    });
+
   }
+
   ngOnInit(): void {
-    // this.elID = this.route.snapshot.paramMap.get('id');
+  }
+
+  enviarDatos(): any {
+    console.log(this.elID);
+    console.log(this.formularioDeEmpleados.value);
+    this.crudService.editarEmpleado(this.elID, this.formularioDeEmpleados.value).subscribe(() => {
+      this.ruteador.navigateByUrl('/listar-empleado');
+    });
   }
 }
