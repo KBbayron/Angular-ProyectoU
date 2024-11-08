@@ -23,7 +23,8 @@ export class AgregarEmpleadoComponent {
   enviarDatos (): any{
     console.log('se preciono el boton');
     console.log(this.formularioDeEmpleados.value);
-    this.crudService.agregarEmpleado(this.formularioDeEmpleados.value).subscribe();
-    this.router.navigateByUrl('/listar-empleado'); 
+    this.crudService.agregarEmpleado(this.formularioDeEmpleados.value).subscribe(respuesta => {
+      this.router.navigateByUrl('/listar-empleado'); 
+    });
   }
 }

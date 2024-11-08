@@ -33,7 +33,6 @@ export class EditarEmpleadoComponent implements OnInit {
       nombre: [''],
       correo: ['']
     });
-
   }
 
   ngOnInit(): void {

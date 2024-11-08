@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-header">Editar emplado</div>
     <div class="card-body">
-        <form [formGroup]="formularioDeEmpleados" (ngSubmit)="enviarDatos()">
+        <form ngNativeValidate [formGroup]="formularioDeEmpleados" (ngSubmit)="enviarDatos()">
             <div class="mb-3">
                 <label for="cuadroNombre" class="form-label">Nombre:</label>
                 <input
@@ -12,6 +12,7 @@
                     id="cuadroNombre"
                     aria-describedby="helpId"
                     placeholder="Escribe tu nombre"
+                    required
                 />
             </div>
             <div class="mb-3">
@@ -24,19 +25,21 @@
                     id="cuadroCorreo"
                     aria-describedby="helpId"
                     placeholder="Escribe tu correo"
+                    required=""
                 />
             </div>
             <!-- bs5group default -->
             <div class="btn-group" role="group" aria-label="Button group name">
                 <button
                     type="submit"
-                    class="btn btn-success"
+                    class="btn btn-warning"
                 >
-                    Agregar
+                    Modificar Registro
                 </button>
                 <button
                     type="button"
                     class="btn btn-primary"
+                    routerLink="/listar-empleado/"
                 >
                     Cancelar
                 </button>
