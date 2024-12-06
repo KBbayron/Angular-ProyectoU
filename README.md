@@ -19,10 +19,10 @@ Este repositorio es un repositorio es un proyecto univeristario aplicando tecnol
 4. npm install bootstrap
 
 ## Crear componentes necesarios
-5. ng g c nombre/components
+5. ng g c components/nombre
 
 ## Crear servicios necesarios
-6. ng g s nombre/services
+6. ng g s services/nombre
 
 ## Iniciar el servidor
 7. ng serve
