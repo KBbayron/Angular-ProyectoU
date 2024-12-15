@@ -9,7 +9,7 @@ Este repositorio es un repositorio es un proyecto univeristario aplicando tecnol
 1. npm install -g @angular/cli
 
 nota: Si no funciona la opcion anterior 
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+"Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
 y vuelve a ingrear el comando del 1.
 
 ### Linux/Ubunut 
