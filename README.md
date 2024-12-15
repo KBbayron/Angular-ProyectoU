@@ -8,6 +8,10 @@ Este repositorio es un repositorio es un proyecto univeristario aplicando tecnol
 ### Windows - Abirir PowerShell con permisos de administrador
 1. npm install -g @angular/cli
 
+nota: Si no funciona la opcion anterior 
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+y vuelve a ingrear el comando del 1.
+
 ### Linux/Ubunut 
 1. sudo npm install -g @angular/cli
 
